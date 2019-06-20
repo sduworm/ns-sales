@@ -1,7 +1,7 @@
 const nsJob = require('./ns');
 const psJob = require('./ps');
 
-// nsJob();
+nsJob();
 psJob();
 
 

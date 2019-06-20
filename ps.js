@@ -10,7 +10,7 @@ function pushSales(sales) {
     console.log(sales.data.list);
     const salesText = sales.data.list.map(sale => {
         const id = sale.id;
-        const name = sale.display_name || sale.name || sale.translate_name;
+        const name = sale.display_name || sale.translate_name || sale.name;
         const image = sale.thumbnail_url;
         const price = Number(sale.non_plus_user_price) / 100;
         const plusPrice = Number(sale.plus_user_price) / 100;

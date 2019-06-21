@@ -2,7 +2,7 @@
  * 样本数
  * @type {number}
  */
-const PUSH_COUNT = 50;
+const SAMPLE_COUNT = 50;
 
 const {httpPost, httpGetAndRun} = require('./utils');
 
@@ -18,11 +18,12 @@ function pushSales(sales) {
         const percentage = Number(sale.non_plus_discount_percentage) / 10;
         const plusPercentage = Number(sale.plus_discount_percentage) / 10;
 
-        return `### **${name}** \n` +
-            `> [查看](https://www.diamondyuan.com/playstation/${id}?region=HONG_KONG) \n` +
-            `> ￥${(price * 0.88).toFixed(2)} (HK$${price}) | PSN+ ￥${(plusPrice * 0.88).toFixed(2)} (HK$${plusPrice})  \n` +
+        return `### **${name}**  \n` +
+            `> [查看](https://www.diamondyuan.com/playstation/${id}?region=HONG_KONG)  \n\n` +
+            `> ￥${(price * 0.88).toFixed(2)} (HK$${price}) |   \n` +
+            `> PSN+ ￥${(plusPrice * 0.88).toFixed(2)} (HK$${plusPrice})  \n` +
             `> ${percentage}折 | PSN+ ${plusPercentage}折 \n\n` +
-            `> ![screenshot](${image})\n` +
+            `> ![screenshot](${image})  \n` +
             `> ###### ${String(tags)}\n------------\n`;
     });
 
@@ -49,5 +50,5 @@ module.exports = () => httpGetAndRun('https://services.diamondyuan.com/365call-a
     content_type: 'GAME',
     platform: 'PS4,PS4%C2%AE',
     page: 1,
-    page_size: PUSH_COUNT
+    page_size: SAMPLE_COUNT
 }, pushSales);

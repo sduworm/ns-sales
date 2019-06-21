@@ -2,7 +2,7 @@
  * 样本数
  * @type {number}
  */
-const PUSH_COUNT = 160;
+const SAMPLE_COUNT = 160;
 
 /**
  * 过滤规则
@@ -62,5 +62,5 @@ module.exports = () => httpRequestAndRun('http://wap.eshop-switch.com/game/query
     current_page: 1,
     up_or_down: 'desc',
     tag: '3',
-    page_size: PUSH_COUNT
+    page_size: SAMPLE_COUNT
 }, pushSales);

@@ -22,7 +22,7 @@ const filter = sale => Number(sale.PRICE) < 300
  * @param next
  * @returns {number}
  */
-const sorter = (current, next) => Number(next.SCORE) - Number(current.SCORE);
+const sorter = (current, next) => Number(current.SCORE) - Number(next.SCORE);
 
 const {httpPost, httpRequestAndRun} = require('./utils');
 

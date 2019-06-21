@@ -21,7 +21,7 @@ function pushSales(sales) {
         return `### **${name}**  \n` +
             `> [查看](https://www.diamondyuan.com/playstation/${id}?region=HONG_KONG)  \n\n` +
             `> ￥${(price * 0.88).toFixed(2)} (HK$${price}) |   \n` +
-            `> PSN+ ￥${(plusPrice * 0.88).toFixed(2)} (HK$${plusPrice})  \n` +
+            `> PSN+ **￥${(plusPrice * 0.88).toFixed(2)}** (HK$${plusPrice})  \n` +
             `> ${percentage}折 | PSN+ ${plusPercentage}折 \n\n` +
             `> ![screenshot](${image})  \n` +
             `> ###### ${String(tags)}\n------------\n`;
